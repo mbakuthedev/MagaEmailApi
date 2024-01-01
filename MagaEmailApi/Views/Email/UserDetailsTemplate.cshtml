@@ -1,0 +1,31 @@
+﻿@model MagaEmailApi.Models.UserDetails
+
+
+<!DOCTYPE html>
+<html lang="en" style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">
+<head style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">
+    <meta charset="UTF-8" style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">
+    <title style="padding: 0;margin: 0;box-sizing: border-box;font-family: 'Nunito', 'Segoe UI', 'Arial Rounded MT', 'Open Sans', 'Helvetica', 'Arial', sans-serif;">TGM Travels</title>
+</head>
+
+ <body>
+     <div>
+        <p> Firstname : @Model.FirstName</p>
+
+     </div>
+   
+    <div>
+        <p> Lastname : @Model.LastName</p>
+    </div>
+
+    <div>
+        <p>Email  : @Model.Email</p>
+    </div>
+     
+    <div>
+        <p>Content : @Model.Content</p>
+    </div>
+    
+ </body>
