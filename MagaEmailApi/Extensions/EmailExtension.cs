@@ -1,6 +1,7 @@
 ﻿using Mailjet.Client;
 using System.Net.Mail;
 using System.Net;
+using MagaEmailApi.Services;
 
 namespace MagaEmailApi.Extensions
 {
@@ -20,11 +21,17 @@ namespace MagaEmailApi.Extensions
             services.AddTransient(provider => new MailjetClient(apiKey, apiSecret));
 
             // Add the MailJet email service to DI
-            services.AddTransient<IEmailService, MailJetEmailService>();
+          //  services.AddTransient<IEmailService, MailJetEmailService>();
 
             // Return services for further chaining
             return services;
         }
+        public static IServiceCollection ConfigureMailJet(this IServiceCollection services,  IConfiguration configuration)
+        {
+            services.Configure<MailJetSettings>(configuration.GetSection("MailJtSettings"));
+
+            return services;
+        }
     }
 }
-}
+

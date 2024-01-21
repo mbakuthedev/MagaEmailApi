@@ -1,7 +1,9 @@
-﻿namespace MagaEmailApi.Services
+﻿using MagaEmailApi.Models;
+
+namespace MagaEmailApi.Services
 {
     public interface IEmailService
     {
-        Task<EmailResponse> SendAsync(EmailDetails emailDetails)
+        Task<EmailResponse> SendAsync(UserDetails details);
     }
 }
